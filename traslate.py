@@ -67,3 +67,7 @@ except Exception as e:
 # çeviriyi tr.txt dosyasına kaydet
 with open(tr_file, mode="w", encoding="utf-8") as file:
     file.write(translated_text)
+
+# geçici .wav dosyalarını sil
+for file in glob.glob("temp*.wav"):
+    os.remove(file)
